@@ -124,7 +124,7 @@ public partial class Form1 : Form
 
         if (_selectedTaskId == null)
         {
-            var createdTask = _manager.CreateUserTask(_selectedUserId!.Value, title, description);
+            var createdTask = _manager.CreateUserTask(_selectedUserId!.Value, title, description, DateTime.UtcNow);
             _selectedTaskId = createdTask.Id;
         }
         else
